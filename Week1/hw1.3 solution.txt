@@ -1,0 +1,30 @@
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building M101J-week1-homework3 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ hw1-3 ---
+[WARNING] Using platform encoding (GBK actually) to copy filtered resources, i.e
+. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\xuanli\M101J\src\main\resour
+ces
+[INFO]
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ hw1-3 ---
+[WARNING] File encoding has not been set, using platform encoding GBK, i.e. buil
+d is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\xuanli\M101J\target\classes
+[INFO]
+[INFO] >>> exec-maven-plugin:1.2.1:java (default-cli) @ hw1-3 >>>
+[INFO]
+[INFO] <<< exec-maven-plugin:1.2.1:java (default-cli) @ hw1-3 <<<
+[INFO]
+[INFO] --- exec-maven-plugin:1.2.1:java (default-cli) @ hw1-3 ---
+THE ANSWER IS: 366
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.812s
+[INFO] Finished at: Sun Aug 25 17:00:34 EDT 2013
+[INFO] Final Memory: 13M/161M
+[INFO] ------------------------------------------------------------------------
