@@ -1,0 +1,73 @@
+ Homework: Homework 2.3
+Blog User Sign-up and Login
+
+Download hw2.3.zip or hw2.3.tar and unpack. This is the beginning of the blog project with the UI for creating an logging in blog authors, but nothing to display posts.
+
+There is a pom.xml file that describes the project.
+
+The project roughly follows the model/view/controller paradigm. BlogController.java is the controller and the model. The templates comprise the view. Here is a description of the directories and files.
+
+/src/main/java/course - contains source code
+/src/main/resources/freemarker - contains templates
+validate.py - the python script that will validate you got it right
+run.sh - the mvn command that starts it running if you don't want to use an IDE
+
+If everything is working properly, you should be able to start the blog by typing:
+
+mvn compile exec:java -Dexec.mainClass=course.BlogController
+
+If you goto http://localhost:8082 you should see a message ¡°this is a placeholder for the blog¡±
+
+Here are some URLs that must work when you are done.
+
+http://localhost:8082/signup
+http://localhost:8082/login
+http://localhost:8082/logout
+
+When you login or sign-up, the blog will redirect to http://localhost:8082/welcome and that must work properly, welcoming the user by username
+
+We have removed four Java statements from UserDAO and marked the areas where you need to work with XXX. You should not need to touch any other code. The java statements that you are going to add will add a new user upon sign-up and validate a login by retrieving the right user document.
+
+The blog stores its data in the blog database in two collections, users and sessions. Here are two example docs for a username ¡®erlichson¡¯ with password ¡®fubar¡¯. You can insert these if you like, but you don¡¯t need to.
+
+> db.users.find()
+{ "_id" : "erlichson", "password" : "VH9IFu+/vUNSKTzZsFZEOsK1,-1924261330" }
+> 
+> db.sessions.find()
+{ "_id" : "AN4M7warH+fdKOszU8qnd2Hmfn8JZFFZ9sff4zcPRpw=", "username" : "erlichson" }
+> 
+
+Once you have the the project working, the following steps should work:
+
+    go to http://localhost:8082/signup
+    create a user
+
+It should redirect you to the welcome page and say: welcome username, where username is the user you signed up with. Now
+
+    Goto http://localhost:8082/logout
+    Now login http://localhost:8082/login.
+
+
+Ok, now it¡¯s time to validate you got it all working.
+
+There was one additional program that should have been downloaded in the project called validate.py.
+
+python validate.py
+
+If you got it right, it will provide a validation code for you to enter into the box below. Enter just the code, no spaces.
+
+Notes on validation
+
+The Python validation script requires the following python modules be installed on your computer: pymongo, urllib, urllib2, and cookielib. A typical Python installation will already have most of these installed except pymongo.
+
+If you have python-setuptools installed, the command "easy_install" makes this simple. Any other missing packages will show up when validate.py is run, and can be installed in a similar fashion.
+
+$ easy_install pymongo
+
+Alternative Java-based Validation
+
+We also have an alternative validation program written in Java. If you are having trouble getting the Python one to work due to issues with your Python installation, you can try this. Start by downloading Validate.zip into a directory. Now cd to that directory and issue the following command
+
+java -jar Validate.jar
+
+Remember to enter just the validation code below and submit. 
